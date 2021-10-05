@@ -6,10 +6,10 @@ name_of_genre varchar(50) not null unique
 create table if not exists Artist(
 id_artist serial primary key,
 name_of_artist varchar(50) not null
-)
+);
 
 create table if not exists Albums(
-id_album primary key,
+id_album serial primary key,
 name_of_album varchar(40) not null,
 release_date integer check(release_date > 1950 and release_date < 2021)
 );
